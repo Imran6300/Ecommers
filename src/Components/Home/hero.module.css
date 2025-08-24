@@ -1,0 +1,80 @@
+*{
+  text-transform: capitalize;
+}
+.herocontainer{
+  height:88vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-top: 8px;
+  gap: 5px;
+}
+.heroFirst {
+  height: 100%;
+  width: 50%;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* Big gradient background */
+  background: linear-gradient(135deg, #6C5CE7, #00CEC9, #6C5CE7);
+  background-size: 400% 400%;
+
+  /* Smooth animation */
+  animation: heroanime 10s ease infinite;
+}
+
+@keyframes heroanime {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+.heroSecond{
+  height: 100%;
+  width: 50%;
+  overflow: hidden;
+}
+img{
+  height: 100%;
+  width: 100%;
+}
+.shopbtn,.explorebtn{
+  height: 45px;
+  width: 110px;
+  border: none;
+  margin:10px 15px 15px 0px;
+  border-radius: 10px;
+}
+.herotext{
+  width: 55%;
+}
+.herotext h1{
+  color: #6C5CE7;
+}
+.herotext h3{
+  color: #2D3436;
+}
+.shopbtn{
+  color: white;
+  background-color: #6C5CE7;
+}
+.shopbtn:hover{
+  background-color: #5A4BD4;
+}
+.explorebtn{
+  background-color: #00CEC9;
+  color: #2D3436;
+}
+.explorebtn:hover{
+  background-color: #00B5AE;
+}
