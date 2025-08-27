@@ -1,59 +1,140 @@
-.nav{
+.nav {
   background-color: #FFFFFF;
   box-shadow: 0px 2px 10px rgba(0,0,0,0.1);
-  position: static;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: all 0.3s ease-in-out;
 }
 
-.navlink{
+.navlink {
   color: #2D3436;
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
 }
-.navlink:focus{
+.navlink:focus {
   color: #FD79A8;
 }
-.navlink:hover{
+.navlink:hover {
   background-color: #6C5CE7;
   border-radius: 10px;
   color: black;
+  /* transform: scale(1.05); */
 }
-.navbtn{
+
+.navbtn {
   background-color: #6C5CE7;
   color: #FFFFFF;
   box-shadow: 0px 0px 6px #00CEC9;
+  transition: all 0.3s ease-in-out;
 }
-.navbtn:hover{
+.navbtn:hover {
   background-color: #5A4BD4;
-  color: #FFFFFF;
+  transform: translateY(-2px);
 }
-.navbtn:nth-child(2){
+.navbtn:nth-child(2) {
   background-color: #00CEC9;
   color: #2D3436;
 }
-.navbtn:nth-child(2):hover{
+.navbtn:nth-child(2):hover {
   background-color: #00B5AE;
 }
-.navcart{
+
+.navcart {
   color: #FD79A8;
   font-size: 1.5rem;
-  /* background-color: red; */
+  transition: all 0.3s ease-in-out;
 }
-.navcart:hover{
+.navcart:hover {
   color: #ff4586;
+  transform: scale(1.2);
 }
-.navcart:focus{
-  border: none;
+.navcart:focus {
+  outline: none;
 }
-.navsearch{
+
+.navsearch {
   background-color: #FFFFFF;
   color: #2D3436;
-  border:1px solid #DADADA;
+  border: 1px solid #DADADA;
+  border-radius: 6px;
+  padding: 6px 12px;
+  transition: all 0.3s ease-in-out;
 }
-.navsearch::placeholder{
+.navsearch::placeholder {
   color: #B0B0B0;
 }
-.navsearch:focus{
+.navsearch:focus {
   border: 2px solid #6C5CE7;
   box-shadow: 0 0 6px rgba(108, 92, 231, 0.3);
 }
-a:active{
+
+a:active {
   color: #2D3436;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  background: none;
+  border: none;
+  color: #2D3436;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: all 0.3s ease-in-out;
+}
+.dropbtn:focus {
+  color: #FD79A8;
+}
+.dropbtn:hover {
+  background-color: #6C5CE7;
+  color: #fff;
+}
+
+.dropdowncontent {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #5A4BD4;
+  min-width: 180px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  border-radius: 8px;
+  z-index: 10;
+  animation: dropdownFade 0.3s ease-in-out;
+}
+
+.dropdowncontent a {
+  color: #fff;
+  padding: 10px 14px;
+  text-decoration: none;
+  display: block;
+  transition: all 0.2s ease-in-out;
+}
+.dropdowncontent a:hover {
+  background-color: #6C5CE7;
+  padding-left: 18px;
+}
+
+.dropdown:hover .dropdowncontent {
+  display: block;
+}
+
+
+@keyframes dropdownFade {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
